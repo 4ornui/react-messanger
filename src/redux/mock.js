@@ -5,23 +5,22 @@ const initMock = {
             userName: 'Max',
             activeUser: true,
             messages: [
-                'Message 1',
-                'Message 2',                
-                'Message 3'
+                { text: 'Hi' },
+                { text: 'How are you' }
             ]
         },
         {   
             id: 2,
             userName: 'Ann', 
             messages: [
-                'Message 1',
+                { text: 'Hello' }
             ]
         },
         {   
             id: 3,
             userName: 'Andrey', 
-            messages: [              
-                'Message 3'
+            messages: [      
+                { text: 'Hi. How are you' }
             ]
         }   
     ],

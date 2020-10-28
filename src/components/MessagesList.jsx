@@ -5,8 +5,8 @@ const MessagesList = () => {
     return (
         <ul className="messages-list">
             {
-                messages.map((message, index) => {
-                    return <li key={index}>{message}</li>
+                messages.map(({text, myMessage }, index) => {
+                    return <li key={index} className={(myMessage ? 'my-message' : '')}>{text}</li>
                 })
             }
         </ul>

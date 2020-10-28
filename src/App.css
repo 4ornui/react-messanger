@@ -22,3 +22,10 @@ aside li {
     height: 80%;
     padding-top: 50px;
 }
+.messages-list li {
+    color:rgb(121, 182, 242);
+}
+.messages-list li.my-message {
+    color:rgb(141, 200, 145);
+    padding-left: 20px;
+}

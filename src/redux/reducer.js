@@ -8,7 +8,7 @@ const reducer = (state = initMock, action) => {
       }  
       case 'SEND_MESSAGE': {
         if(action.text) {
-          state.contactsList.find(({activeUser}) => activeUser).messages.push(action.text);
+          state.contactsList.find(({activeUser}) => activeUser).messages.push({ text: action.text, myMessage: true });
         }
       }        
       case 'EDIT_TEXTEREA': {
