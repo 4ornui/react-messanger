@@ -6,6 +6,7 @@ const ContactsList = () => {
 
     const handleClick = (id) => {   
         dispatch({type: 'CHANGE_CHAT', idUser: id});
+        dispatch({type: 'EDIT_TEXTEREA', text: ''});
     }
     
     return (
@@ -14,7 +15,7 @@ const ContactsList = () => {
             <ul>
                 {
                     contactsList.map(({userName, activeUser, id}) => {
-                        return <li key={id} onClick={() => handleClick(id)} className={(activeUser ? 'active-user' : '')}>{userName}</li>
+                    return <li key={id} onClick={() => handleClick(id)} className={(activeUser ? 'active-user' : '')}>{userName}</li>
                     })
                 }
             </ul>
