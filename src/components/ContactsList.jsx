@@ -1,12 +1,16 @@
+import { useSelector } from 'react-redux';
 const ContactsList = () => {
+    const contactsList = useSelector(state => state.contactsList); 
+    
     return (
         <aside>
             <h1>Contacts List</h1>
             <ul>
-                <li>Max</li>
-                <li>Ann</li>
-                <li>Andrey</li>
-                <li>Nikita</li>
+                {
+                    contactsList.map(({userName}) => {
+                        return <li>{userName}</li>
+                    })
+                }
             </ul>
         </aside>
     );
