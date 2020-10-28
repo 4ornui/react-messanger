@@ -8,6 +8,12 @@ aside {
     padding: 20px 2%;
     width: 20%;
 }
+aside li {
+    cursor: pointer;
+}
+.active-user {
+    color: #61dafb;
+}
 .chat { 
     padding: 20px 2%;
     width: 72%;

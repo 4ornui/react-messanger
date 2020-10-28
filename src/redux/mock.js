@@ -1,7 +1,9 @@
 const initMock = {
     contactsList: [
         {   
-            userName: 'Max', 
+            id: 1,
+            userName: 'Max',
+            activeUser: true,
             messages: [
                 'Message 1',
                 'Message 2',                
@@ -9,12 +11,14 @@ const initMock = {
             ]
         },
         {   
+            id: 2,
             userName: 'Ann', 
             messages: [
                 'Message 1',
             ]
         },
         {   
+            id: 3,
             userName: 'Andrey', 
             messages: [              
                 'Message 3'

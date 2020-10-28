@@ -1,14 +1,20 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 const ContactsList = () => {
+
     const contactsList = useSelector(state => state.contactsList); 
+    const dispatch = useDispatch(); 
+
+    const handleClick = (id) => {   
+        dispatch({type: 'CHANGE_CHAT', idUser: id});
+    }
     
     return (
         <aside>
             <h1>Contacts List</h1>
             <ul>
                 {
-                    contactsList.map(({userName}) => {
-                        return <li>{userName}</li>
+                    contactsList.map(({userName, activeUser, id}) => {
+                        return <li key={id} onClick={() => handleClick(id)} className={(activeUser ? 'active-user' : '')}>{userName}</li>
                     })
                 }
             </ul>
